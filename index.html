@@ -13,7 +13,13 @@
 	h1 {
 		color: yellow;
 		text-shadow: 2px 2px red;
-		font-family: sans-serif;
+		font-family: "Comic Sans MS", "Comic Sans", cursive-no;
+}
+
+	h2 {
+		color: orange;
+		text-shadow: 2px 2px red;
+		font-family: "MS Sans Serif";
 }
 
 	p {
@@ -38,13 +44,13 @@
 
 	body {
 		background-color: #2c3e50;
-		background-image: 					url("https://wallpaperaccess.com/full/1540003.jpg");
+		background-image: 					url("floresta_laranja.jpeg");
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		color: white;
 		padding: 20px;
-		font-family: Arial, sans-serif;
+		font-family: "Arial, sans-serif";
 }
 
 	img {
@@ -52,9 +58,8 @@
 		height: 200px;
 		object-fit: cover;
 		border: 4px ridge #ff0000;
+		border-radius: 15px;
 }
-
-	
 
 	.container-item {
 		display: flex;
@@ -104,18 +109,87 @@
 		list-style-position: inside;
 }
 
+	header {
+		background-color: rgba(44, 62, 80, 0.9);
+		border: 4px ridge #ff0000;
+		border-radius: 15px;
+		padding: 20px;
+		margin-bottom: 20px;
+		text-shadow: 2px 2px #000;
+		text-align: center;
+}
+
+	nav {
+		display: flex;
+		justify-content: center;
+		gap: 15px;
+		margin-bottom: 20px;
+}
+
+	article {
+		background: rgba(0, 0, 0, 0.5);
+		padding: 15px;
+		border-left: 5px solid yellow;
+		margin: 10px 0;
+}
+
+	aside {
+		font-style: italic;
+		color: #bdc3c7;
+		font-size: 14px;
+		text-align: right;
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    padding: 30px;
+}
+
+.main-footer {
+    background-color: rgba(44, 62, 80, 0.9);
+    border: 4px ridge #ff0000;
+    border-radius: 15px;
+    padding: 20px;
+    display: inline-block;
+}
+
+.social a {
+    color: #f1c40f;
+    text-decoration: none;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.social a:hover {
+    color: #ff0000;
+    transform: scale(1.05);
+}
+
+.icon-insta {
+    width: 30px !important;
+    height: 30px !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
 	</style>
 </head>
 <body>
-	<div class="main">
-		<header>
+	<header>
 		<h1>Coisas que eu curto:</h1>
-		</header>
-	</div>
+	</header>
 <main>
 	<div class="container-item">
-	<img src="https://i.etsystatic.com/16534411/r/il/c48c12/4558924237/il_850x675.4558924237_a4yt.jpg">
+	<img src="ta_potente.jpeg">
 		<section id="sobre min">
+	<div class="main" top="200px">
+	<h1>Arth</h1>
+	</div>
 			<ul>
 			<li>Ouvir música</li>
  			<li>Desenhar</li>
@@ -124,7 +198,7 @@
 			</ul>
 		</section>
 	</div>
-	<div class="container-item">
+		<div class="container-item">
 		<img src="https://i.etsystatic.com/16534411/r/il/c48c12/4558924237/il_850x675.4558924237_a4yt.jpg">
 		<section id="Amigos">
 			<ul>
@@ -157,26 +231,19 @@
 			</ul>
 		</section>
 	</div>
-		
 </main>
-
 <footer>
-	<div class="main"> <p>Meu site está ficando mais organizado!</p>
-	</div>
+    <div class="main-footer"> 
+        <p>Desenvolvido por
+<strong>Arth</strong></p>
+        <div class="social">
+            <a href="https://www.instagram.com/artcaty_2023" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" class="icon-insta">
+                @artcaty_2023
+            </a>
+        </div>
+    </div>
 </footer>
 
-	<div class="botao">
-		<div class="container-item">
-		<img src="https://i.etsystatic.com/16534411/r/il/c48c12/4558924237/il_850x675.4558924237_a4yt.jpg">
-			<section id="Amigos3">
-			<ul>
-			<li>Ouvir música</li>
- 			<li>Desenhar</li>
-			<li>Jogar videogame</li>
-			<li>Assistir séries</li>
-			</ul>
-			</section>
-		</div>
-	</div>
 </body>
 </html>
