@@ -1,0 +1,341 @@
+/* =====================
+   ESTILOS GLOBAIS
+   ===================== */
+
+:root {
+	--color-primary: #2c3e50;
+	--color-accent: #ff0000;
+	--color-text: #ffffff;
+	--color-border: rgba(255, 255, 255, 0.2);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--color-primary);
+	background-image: url("../images/floresta_laranja.jpeg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color: var(--color-text);
+	padding: 20px;
+	font-family: "Arial, sans-serif";
+	line-height: 1.6;
+}
+
+/* =====================
+   TIPOGRAFIA
+   ===================== */
+
+h1 {
+	color: #ffff00;
+	text-shadow: 2px 2px var(--color-accent);
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	margin-bottom: 10px;
+}
+
+h2 {
+	color: #ff8800;
+	text-shadow: 2px 2px var(--color-accent);
+	font-family: "MS Sans Serif";
+	margin-bottom: 10px;
+}
+
+p {
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+
+/* =====================
+   LISTAS
+   ===================== */
+
+li {
+	list-style-position: inside;
+	font-size: 20px;
+	margin-bottom: 8px;
+}
+
+ul {
+	padding-left: 20px;
+}
+
+/* =====================
+   HEADER
+   ===================== */
+
+header {
+	background-color: rgba(44, 62, 80, 0.9);
+	border: 4px ridge var(--color-accent);
+	border-radius: 15px;
+	padding: 20px;
+	margin-bottom: 20px;
+	text-shadow: 2px 2px #000;
+	text-align: center;
+}
+
+/* =====================
+   NAVEGAÇÃO
+   ===================== */
+
+nav {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	margin-bottom: 20px;
+	flex-wrap: wrap;
+}
+
+nav a {
+	color: #f1c40f;
+	text-decoration: none;
+	transition: 0.3s;
+	font-weight: bold;
+}
+
+nav a:hover {
+	color: var(--color-accent);
+	text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+/* =====================
+   MAIN E CONTAINER
+   ===================== */
+
+main {
+	background-color: rgba(44, 62, 80, 0.8);
+	border: 4px ridge var(--color-accent);
+	border-radius: 15px;
+	padding: 20px;
+	margin: 20px auto;
+	text-shadow: 2px 2px gray;
+	max-width: 1200px;
+}
+
+.main {
+	background-color: rgba(44, 62, 80, 0.8);
+	border: 4px ridge var(--color-accent);
+	border-radius: 15px;
+	padding: 15px;
+	margin: 10px 0;
+	text-shadow: 2px 2px gray;
+}
+
+/* =====================
+   CONTAINER DE ITENS
+   ===================== */
+
+.container-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+	border-bottom: 1px solid var(--color-border);
+	padding: 15px;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+.container-item:nth-of-type(even) {
+	flex-direction: row-reverse;
+}
+
+.container-item section {
+	flex: 1;
+	min-width: 250px;
+}
+
+/* =====================
+   IMAGENS
+   ===================== */
+
+img {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	border: 4px ridge var(--color-accent);
+	border-radius: 15px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	cursor: pointer;
+}
+
+img:hover {
+	transform: scale(1.1);
+	box-shadow: 0 0 20px rgba(255, 255, 0, 0.6);
+	z-index: 1;
+}
+
+/* =====================
+   ARTIGOS E SEÇÕES
+   ===================== */
+
+article {
+	background: rgba(0, 0, 0, 0.5);
+	padding: 15px;
+	border-left: 5px solid #ffff00;
+	margin: 10px 0;
+	border-radius: 5px;
+}
+
+aside {
+	font-style: italic;
+	color: #bdc3c7;
+	font-size: 14px;
+	text-align: right;
+	margin-top: 20px;
+}
+
+section {
+	margin: 15px 0;
+}
+
+/* =====================
+   BOTÕES
+   ===================== */
+
+.botao, button {
+	display: inline-block;
+	background-color: rgba(25, 25, 25, 1);
+	border: 3px solid #cfcfcf;
+	border-radius: 15px;
+	padding: 15px 30px;
+	color: var(--color-text);
+	cursor: pointer;
+	transition: 0.3s;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.botao:hover, button:hover {
+	background-color: rgba(50, 50, 50, 1);
+	box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+	transform: scale(1.05);
+}
+
+/* =====================
+   FOOTER
+   ===================== */
+
+footer {
+	margin-top: 50px;
+	text-align: center;
+	padding: 30px;
+}
+
+.main-footer {
+	background-color: rgba(44, 62, 80, 0.9);
+	border: 4px ridge var(--color-accent);
+	border-radius: 15px;
+	padding: 20px;
+	display: inline-block;
+}
+
+/* =====================
+   REDES SOCIAIS
+   ===================== */
+
+.social {
+	margin-top: 15px;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+.social a {
+	color: #f1c40f;
+	text-decoration: none;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	transition: 0.3s;
+}
+
+.social a:hover {
+	color: var(--color-accent);
+	transform: scale(1.1);
+}
+
+.icon-insta {
+	width: 30px !important;
+	height: 30px !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+/* =====================
+   UTILIDADES
+   ===================== */
+
+.marquee-up {
+	border: 2px inset white;
+	background: #c0c0c0;
+	color: black;
+	padding: 10px;
+	margin: 10px;
+	font-family: "MS Sans Serif";
+	border-radius: 5px;
+}
+
+/* =====================
+   RESPONSIVIDADE
+   ===================== */
+
+@media (max-width: 768px) {
+	body {
+		padding: 10px;
+	}
+
+	main {
+		padding: 15px;
+		margin: 10px auto;
+	}
+
+	.container-item {
+		flex-direction: column !important;
+		align-items: center;
+		text-align: center;
+	}
+
+	.container-item img {
+		width: 150px;
+		height: 150px;
+	}
+
+	header h1 {
+		font-size: 24px;
+	}
+
+	nav {
+		gap: 10px;
+	}
+
+	li {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 480px) {
+	h1 {
+		font-size: 20px;
+	}
+
+	li {
+		font-size: 16px;
+	}
+
+	.container-item {
+		padding: 10px;
+		margin-bottom: 20px;
+	}
+
+	img {
+		width: 120px;
+		height: 120px;
+	}
+}
