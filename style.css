@@ -1,0 +1,68 @@
+:root {
+    --light: #ebecd0; --dark: #779556;
+    --highlight: rgba(255, 255, 255, 0.5); --capture: rgba(255, 0, 0, 0.4);
+    --bg: #2b2b2b; --panel: #312e2b;
+  }
+  
+  * { box-sizing: border-box; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+
+  body { 
+    display: flex; align-items: center; justify-content: center; 
+    min-height: 100vh; margin: 0; background: var(--bg); color: #fff; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+
+  #game { display: flex; flex-direction: row; gap: 20px; align-items: stretch; padding: 10px; width: 100%; max-width: 1100px; }
+
+  #board-container { flex: 0 0 min(90vw, 600px); display: flex; align-items: center; position: relative; }
+
+  #board { 
+    display: grid; grid-template-columns: repeat(8, 12.5%); grid-template-rows: repeat(8, 12.5%);
+    width: 100%; aspect-ratio: 1/1; box-shadow: 0 8px 25px rgba(0,0,0,0.5); background: #333;
+  }
+
+  .square { position: relative; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; cursor: pointer; }
+  .light { background: var(--light); }
+  .dark { background: var(--dark); }
+  
+  .hl-move::after { content: ""; width: 25%; height: 25%; background: rgba(0,0,0,0.1); border-radius: 50%; position: absolute; }
+  .hl-capture { background: var(--capture) !important; }
+
+  .piece { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; z-index: 2; transition: transform 0.1s; }
+  .piece img { width: 92%; height: 92%; object-fit: contain; pointer-events: none; }
+
+  #promo-menu {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7); display: none; z-index: 100;
+    align-items: center; justify-content: center; gap: 15px; border-radius: 2px;
+  }
+  .promo-option {
+    width: 18%; aspect-ratio: 1/1; background: var(--light); 
+    border: 3px solid var(--dark); border-radius: 8px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; transition: transform 0.2s;
+  }
+  .promo-option:hover { transform: scale(1.1); background: #fff; }
+  .promo-option img { width: 85%; }
+
+  #info { flex: 1; min-width: 280px; padding: 20px; background: var(--panel); border-radius: 4px; display: flex; flex-direction: column; justify-content: center; }
+
+  h2 { margin: 0 0 15px 0; font-size: 22px; text-align: center; color: #fff; }
+  #status { font-size: 18px; font-weight: 600; padding: 12px; background: #262421; border-radius: 4px; text-align: center; margin-bottom: 20px; border-left: 4px solid #779556; }
+
+  .btn-group { display: flex; flex-direction: column; gap: 8px; }
+  button { 
+    padding: 14px; background: #454341; color: #dadada; border: none; 
+    border-radius: 4px; cursor: pointer; font-size: 15px; font-weight: bold;
+    border-bottom: 3px solid #262421;
+  }
+  button:active { transform: translateY(2px); border-bottom: none; }
+  #reset { background: #312e2b; color: #888; font-size: 13px; margin-top: 10px; }
+
+  @media (max-width: 850px) {
+    #game { flex-direction: column; align-items: center; justify-content: center; height: 100vh; gap: 10px; padding: 5px; }
+    #board-container { width: 96vw; max-height: 60vh; flex: none; }
+    #info { width: 96vw; padding: 10px; flex: none; min-width: unset; justify-content: flex-start; }
+    h2 { display: none; }
+    #status { margin-bottom: 10px; padding: 8px; font-size: 16px; }
+    .promo-option { width: 22%; }
+  }
